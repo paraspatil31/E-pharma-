@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success - E-Pharma</title>
+    <link rel="stylesheet" href="end.css"> <!-- Fixed typo in the link -->
+</head>
+<body>
+
+    <header>
+        <h1>Order Successful!</h1>
+    </header>
+
+    <div class="container">
+        <div class="success-message">
+            <img src="https://png.pngtree.com/png-vector/20190228/ourmid/pngtree-check-mark-icon-design-template-vector-isolated-png-image_711429.jpg" alt="Success" class="success-icon">
+            <h2>Thank you for your purchase!</h2>
+            <p>Your order has been successfully placed. You will receive a confirmation email shortly.</p>
+            <p>Order Number: <strong id="order-number"></strong></p>
+
+            <div class="buttons">
+                <a href="order-detail.html" class="btn" onclick="redirectToOrderDetail()">View Order Details</a>
+                <a href="Homepage.html" class="btn">Back to Homepage</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 E-Pharma. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to generate a random order number
+       // Function to generate a unique order number
+function generateOrderNumber() {
+    return Math.floor(100000000 + Math.random() * 900000000); // Generates a number between 100000000 and 999999999
+}
+
+// Function to set and display the order number
+function setOrderNumber() {
+    const orderNumber = generateOrderNumber();
+    localStorage.setItem('orderNumber', orderNumber); // Store the new order number in local storage
+    document.getElementById('order-number').textContent = orderNumber;
+}
+
+// Call setOrderNumber to display a new order number every time the page loads
+window.onload = setOrderNumber;
+
+// Function to redirect to the order detail page
+function redirectToOrderDetail() {
+    window.location.href = 'order-detail.html';
+}
+
+    </script>
+</body>
+</html>
