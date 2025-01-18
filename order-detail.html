@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details - E-Pharma</title>
+    <link rel="stylesheet" href="order-detail.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>Order Details</h1>
+
+        <!-- Order Information Section -->
+        <div class="order-summary">
+            <h2>Order #<span id="generated-order-number"></span></h2>
+            <p>Date: <span id="order-date"></span></p>
+            <p>Shipping Address: <span id="shipping-address"></span></p>
+        </div>
+
+        <!-- Product Summary Table -->
+        <div class="order-summary">
+            <h2>Product Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="product-details">
+                    <!-- Product details will be dynamically inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Order Total Section -->
+        <div class="order-summary">
+            <h2>Order Total</h2>
+            <p><strong id="total-amount"></strong></p>
+        </div>
+
+        <!-- Status and Back Button -->
+        <div class="status completed">
+            <h2>Status: Completed</h2>
+        </div>
+        <a href="Homepage.html" class="back-button">Back to Homepage</a>
+    </div>
+
+    <script src="order-detail.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

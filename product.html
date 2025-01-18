@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-Pharma Product Page</title>
+    <link rel="stylesheet" href="product.css">
+    
+</head>
+<body>
+
+    <header>
+        <h1>E-Pharma</h1>
+        <p>Your trusted online pharmacy</p>
+    </header>
+
+    <div class="container">
+        <div class="product">
+            <div class="product-image">
+                <img src="product-image.jpg" alt="Product Name">
+            </div>
+            <div class="product-details">
+                <h1>Product Name</h1>
+                <div class="price">$49.99</div>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet est eros. Praesent convallis odio sed enim sollicitudin, id placerat mi scelerisque.
+                </p>
+                <div class="quantity">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" onchange="updateTotal()">
+                    <p class="total-price">Total Price: <span id="total-price">$49.00</span></p>
+                </div>                <button class="buy-now" onclick="window.location.href='payment.html'">Buy Now</button>
+
+            </div>
+        </div>
+    </div>
+    <script src="product.js"></script>
+
+    <footer>
+        <p>&copy; 2024 E-Pharma. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
